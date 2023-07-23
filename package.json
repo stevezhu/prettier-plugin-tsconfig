@@ -1,0 +1,53 @@
+{
+  "name": "prettier-plugin-tsconfig",
+  "version": "0.1.0",
+  "keywords": [
+    "prettier",
+    "typescript",
+    "tsconfig"
+  ],
+  "author": "Steve Zhu <4130171+stevezhu@users.noreply.github.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "format": "prettier -w .",
+    "generate": "node --loader ts-node/esm scripts/generateSortOrder.ts",
+    "lint": "prettier -c . && eslint .",
+    "prepare": "turbo run build --filter=prettier-plugin-tsconfig",
+    "test": "tsc --noEmit && vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@babel/types": "^7.22.5"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "cheerio": "1.0.0-rc.12",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-vitest": "^0.2.6",
+    "prettier-plugin-packagejson": "^2.4.5",
+    "ts-node": "^10.9.1",
+    "tsup": "^7.0.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.33.0"
+  },
+  "peerDependencies": {
+    "prettier": "^3.x"
+  }
+}

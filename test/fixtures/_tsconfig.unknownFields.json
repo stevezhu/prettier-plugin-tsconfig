@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Unknown Fields Test",
+  "exclude": ["mockfile.ts"],
+  "compilerOptions": {
+    "unknownField2": 2,
+    "isolatedModules": true,
+    "target": "ESNext",
+    "unknownField4": [3, 2, 1],
+    "unknownField3": { "unknownNestedField2": 2, "unknownNestedField1": 1 },
+    "strict": true,
+    "moduleResolution": "node",
+    "unknownField": 1
+  }
+}
