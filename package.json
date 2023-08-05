@@ -39,7 +39,7 @@
     "@typescript-eslint/parser": "^6.1.0",
     "cheerio": "1.0.0-rc.12",
     "eslint": "^8.45.0",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-vitest": "^0.2.6",
     "prettier-plugin-packagejson": "^2.4.5",
     "ts-node": "^10.9.1",
