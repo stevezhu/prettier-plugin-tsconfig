@@ -2,21 +2,21 @@
 
 exports[`sorts tsconfig > tsconfig.test.json 1`] = `
 "{
-  \\"$schema\\": \\"https://json.schemastore.org/tsconfig\\",
-  \\"compilerOptions\\": {
-    \\"exactOptionalPropertyTypes\\": true,
-    \\"noImplicitOverride\\": true,
-    \\"noImplicitReturns\\": true,
-    \\"noPropertyAccessFromIndexSignature\\": true,
-    \\"noUncheckedIndexedAccess\\": true,
-    \\"noUnusedLocals\\": true,
-    \\"strict\\": true,
-    \\"moduleResolution\\": \\"node\\",
-    \\"esModuleInterop\\": true,
-    \\"forceConsistentCasingInFileNames\\": true,
-    \\"isolatedModules\\": true,
-    \\"target\\": \\"ESNext\\",
-    \\"skipLibCheck\\": true
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "target": "ESNext",
+    "skipLibCheck": true
   }
 }
 "
@@ -24,19 +24,19 @@ exports[`sorts tsconfig > tsconfig.test.json 1`] = `
 
 exports[`sorts unknown fields at end in lexical order > tsconfig.unknownFields.json 1`] = `
 "{
-  \\"$schema\\": \\"https://json.schemastore.org/tsconfig\\",
-  \\"exclude\\": [\\"mockfile.ts\\"],
-  \\"compilerOptions\\": {
-    \\"strict\\": true,
-    \\"moduleResolution\\": \\"node\\",
-    \\"isolatedModules\\": true,
-    \\"target\\": \\"ESNext\\",
-    \\"unknownField\\": 1,
-    \\"unknownField2\\": 2,
-    \\"unknownField3\\": { \\"unknownNestedField1\\": 1, \\"unknownNestedField2\\": 2 },
-    \\"unknownField4\\": [3, 2, 1]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "exclude": ["mockfile.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "target": "ESNext",
+    "unknownField": 1,
+    "unknownField2": 2,
+    "unknownField3": { "unknownNestedField1": 1, "unknownNestedField2": 2 },
+    "unknownField4": [3, 2, 1]
   },
-  \\"display\\": \\"Unknown Fields Test\\"
+  "display": "Unknown Fields Test"
 }
 "
 `;
