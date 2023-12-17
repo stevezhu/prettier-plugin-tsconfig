@@ -6,15 +6,46 @@ on:
     branches: [main]
     types: [opened, synchronize]
 jobs:
+  buildCheck:
+    name: Verify build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm run build
+      - name: Verify build
+        run: |
+          git add -A
+          git reset '*.map' # ignore source maps because it seems like they build differently on ci
+          git --no-pager diff --staged --color --exit-code
+      - name: Set error message
+        if: failure()
+        run: |
+          echo 'Please run' >> $GITHUB_STEP_SUMMARY
+          echo '' >> $GITHUB_STEP_SUMMARY
+          echo '```sh' >> $GITHUB_STEP_SUMMARY
+          echo 'pnpm run build' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
   checks:
     name: Checks
+    needs: buildCheck
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x, 20.x]
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
@@ -23,4 +54,3 @@ jobs:
       - run: pnpm install
       - run: pnpm run lint
       - run: pnpm run test
-      - run: pnpm run build
