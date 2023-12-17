@@ -10,6 +10,10 @@ parserOptions:
   sourceType: module
 overrides:
   - files:
+      - 'scripts/*'
+    env:
+      node: true
+  - files:
       - '*.{ts,tsx}'
     extends:
       - 'plugin:@typescript-eslint/strict-type-checked'
@@ -21,10 +25,6 @@ overrides:
       project: true
     rules:
       '@typescript-eslint/consistent-type-definitions': 'off'
-      '@typescript-eslint/no-misused-promises':
-        - error
-        - checksVoidReturn:
-            attributes: false
   - files:
       - '*.test.*'
     rules:
