@@ -25,10 +25,12 @@ jobs:
         run: git add -A && git --no-pager diff --color --exit-code && git --no-pager diff --cached --color --exit-code
       - name: Set error message
         if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            core.setFailed('Please run "pnpm run build"')
+        run: |
+          echo 'Please run' >> $GITHUB_STEP_SUMMARY
+          echo '' >> $GITHUB_STEP_SUMMARY
+          echo '```sh' >> $GITHUB_STEP_SUMMARY
+          echo 'pnpm run build' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
   checks:
     name: Checks
     needs: buildCheck
