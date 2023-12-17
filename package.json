@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "format": "prettier -w .",
+    "format": "prettier -w . && eslint . --fix",
     "generate": "tsx scripts/generateSortOrder.ts",
     "lint": "prettier -c . && eslint .",
     "prepare": "npm run build",
