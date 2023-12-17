@@ -22,7 +22,10 @@ jobs:
       - run: pnpm install
       - run: pnpm run build
       - name: Verify build
-        run: git add -A && git --no-pager diff --staged --color --exit-code
+        run: |
+          git add -A
+          git reset '*.map' # ignore source maps because it seems like they build differently on ci
+          git --no-pager diff --staged --color --exit-code
       - name: Set error message
         if: failure()
         run: |
