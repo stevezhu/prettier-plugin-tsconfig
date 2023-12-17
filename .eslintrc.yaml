@@ -3,11 +3,16 @@ extends:
   - 'eslint:recommended'
   - 'prettier'
   - 'plugin:vitest/recommended'
+plugins:
+  - 'simple-import-sort'
 ignorePatterns:
   - dist/
 parserOptions:
   ecmaVersion: latest
   sourceType: module
+rules:
+  simple-import-sort/imports: error
+  simple-import-sort/exports: error
 overrides:
   - files:
       - 'scripts/*'

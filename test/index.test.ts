@@ -2,6 +2,7 @@ import { readFile } from 'fs/promises';
 import { resolve } from 'path';
 import { format } from 'prettier';
 import { expect, test } from 'vitest';
+
 import * as plugin from '../src/index.js';
 
 test.each([
