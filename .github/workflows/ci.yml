@@ -22,7 +22,7 @@ jobs:
       - run: pnpm install
       - run: pnpm run build
       - name: Verify build
-        run: git add -A && git --no-pager diff --color --exit-code && git --no-pager diff --cached --color --exit-code
+        run: git add -A && git --no-pager diff --staged --color --exit-code
       - name: Set error message
         if: failure()
         run: |
