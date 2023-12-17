@@ -24,7 +24,7 @@
   "scripts": {
     "build": "tsup",
     "format": "prettier -w .",
-    "generate": "node --loader ts-node/esm scripts/generateSortOrder.ts",
+    "generate": "tsx scripts/generateSortOrder.ts",
     "lint": "prettier -c . && eslint .",
     "prepare": "npm run build",
     "test": "tsc --noEmit && vitest run",
@@ -42,8 +42,8 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-vitest": "^0.3.0",
     "prettier-plugin-packagejson": "^2.4.5",
-    "ts-node": "^10.9.1",
     "tsup": "^8.0.0",
+    "tsx": "^4.6.2",
     "typescript": "^5.1.6",
     "vitest": "^1.0.0"
   },
