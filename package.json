@@ -26,7 +26,6 @@
     "format": "prettier -w .",
     "generate": "tsx scripts/generateSortOrder.ts",
     "lint": "prettier -c . && eslint .",
-    "prepare": "npm run build",
     "test": "tsc --noEmit && vitest run",
     "test:watch": "vitest"
   },
@@ -53,6 +52,6 @@
   },
   "packageManager": "pnpm@8.12.1",
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   }
 }

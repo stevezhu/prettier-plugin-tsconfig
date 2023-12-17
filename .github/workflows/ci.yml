@@ -6,6 +6,27 @@ on:
     branches: [main]
     types: [opened, synchronize]
 jobs:
+  buildCheck:
+    name: Verify build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm run build
+      - name: Verify build
+        run: git add -A && git --no-pager diff --color --exit-code && git --no-pager diff --cached --color --exit-code
+      - name: Set error message
+        if: failure()
+        run: |
+          echo ::error::Please run "pnpm run build"
   checks:
     name: Checks
     runs-on: ubuntu-latest
@@ -13,8 +34,10 @@ jobs:
       matrix:
         node-version: [18.x, 20.x]
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
@@ -23,4 +46,3 @@ jobs:
       - run: pnpm install
       - run: pnpm run lint
       - run: pnpm run test
-      - run: pnpm run build
