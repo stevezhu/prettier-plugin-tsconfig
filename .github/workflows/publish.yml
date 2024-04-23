@@ -1,39 +1,26 @@
-name: Node.js Package
-
+name: Publish
 on:
   release:
     types: [created]
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: npm test
-
-  publish-gpr:
-    needs: build
+  build-and-publish:
     runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Pnpm
-        uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v3
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: package.json
           cache: pnpm
           registry-url: https://npm.pkg.github.com/
-      - name: Install dependencies
-        run: pnpm install
-      - name: Publish package
-        run: pnpm publish
+      - run: pnpm install
+      - run: pnpm run lint
+      - run: pnpm run test
+      - run: pnpm run build
+      - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
