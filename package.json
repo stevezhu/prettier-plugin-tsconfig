@@ -1,6 +1,6 @@
 {
   "name": "@stevezhu/prettier-plugin-tsconfig",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "keywords": [
     "prettier",
     "typescript",
@@ -26,7 +26,6 @@
     "format": "prettier -w . && eslint . --fix",
     "generate": "tsx scripts/generateSortOrder.ts",
     "lint": "prettier -c . && eslint .",
-    "prepare": "npm run build",
     "test": "tsc --noEmit && vitest run",
     "test:watch": "vitest"
   },
