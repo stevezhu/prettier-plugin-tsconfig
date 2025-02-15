@@ -1,6 +1,6 @@
 {
-  "name": "@stevezhu/prettier-plugin-tsconfig",
-  "version": "0.4.2",
+  "name": "@stzhu/prettier-plugin-tsconfig",
+  "version": "0.4.3",
   "keywords": [
     "prettier",
     "typescript",
