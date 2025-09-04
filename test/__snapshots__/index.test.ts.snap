@@ -1,5 +1,16 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`sorts jsconfig > jsconfig.json 1`] = `
+"{
+  "$schema": "https://json.schemastore.org/jsconfig",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true
+  }
+}
+"
+`;
+
 exports[`sorts tsconfig > tsconfig.test.json 1`] = `
 "{
   "$schema": "https://json.schemastore.org/tsconfig",

@@ -11,6 +11,7 @@ test.each([
     'sorts unknown fields at end in lexical order',
     'tsconfig.unknownFields.json',
   ],
+  ['sorts jsconfig', 'jsconfig.json'],
 ])('%s', async (_, filename) => {
   // Fixtures are prefixed with an '_' so that they don't get formatted by this plugin
   const filepath = resolve(__dirname, 'fixtures', `_${filename}`);
