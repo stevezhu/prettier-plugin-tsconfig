@@ -34,20 +34,20 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@babel/types": "^7.27.0"
+    "@babel/types": "^7.28.2"
   },
   "devDependencies": {
     "@stzhu/eslint-config": "^0.5.0",
     "@stzhu/tsconfig": "^0.1.0",
-    "@types/node": "^22.14.1",
-    "cheerio": "^1.0.0",
-    "eslint": "^9.25.0",
-    "globals": "^16.0.0",
-    "prettier-plugin-packagejson": "^2.5.10",
-    "tsup": "^8.4.0",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.3",
-    "vitest": "^3.1.1"
+    "@types/node": "^24.3.0",
+    "cheerio": "^1.1.2",
+    "eslint": "^9.34.0",
+    "globals": "^16.3.0",
+    "prettier-plugin-packagejson": "^2.5.19",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "prettier": "^3.x"
