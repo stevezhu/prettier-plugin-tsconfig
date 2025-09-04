@@ -1,28 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "exclude": ["node_modules"],
+  "extends": "@stzhu/tsconfig/tsconfig.base.json",
   "compilerOptions": {
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strict": true,
-    "strictNullChecks": true,
     "module": "ES2022",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "rootDir": "./",
-    "declaration": true,
-    "declarationMap": true,
-    "outDir": "dist/",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "target": "ESNext",
-    "preserveWatchOutput": true,
-    "skipLibCheck": true
+    "moduleResolution": "Bundler"
   }
 }
