@@ -3,10 +3,7 @@
 exports[`sorts jsconfig > jsconfig.json 1`] = `
 "{
   "$schema": "https://json.schemastore.org/jsconfig",
-  "compilerOptions": {
-    "allowJs": true,
-    "checkJs": true
-  }
+  "compilerOptions": { "allowJs": true, "checkJs": true }
 }
 "
 `;
