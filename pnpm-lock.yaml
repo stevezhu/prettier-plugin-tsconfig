@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@stzhu/eslint-config':
         specifier: ^0.6.3
-        version: 0.6.3(eslint@9.35.0(jiti@2.5.1))(storybook@9.1.4(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.4(@types/node@24.3.1)(jiti@2.5.1)(tsx@4.20.5)))(tailwindcss@4.1.13)(turbo@2.5.6)(typescript@5.9.2)(vitest@3.2.4(@types/node@24.3.1)(jiti@2.5.1)(tsx@4.20.5))
+        version: 0.6.4(eslint@9.35.0(jiti@2.5.1))(storybook@9.1.4(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.4(@types/node@24.3.1)(jiti@2.5.1)(tsx@4.20.5)))(tailwindcss@4.1.13)(turbo@2.5.6)(typescript@5.9.2)(vitest@3.2.4(@types/node@24.3.1)(jiti@2.5.1)(tsx@4.20.5))
       '@stzhu/tsconfig':
         specifier: ^0.1.0
         version: 0.1.0
@@ -452,8 +452,8 @@ packages:
   '@storybook/global@5.0.0':
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
 
-  '@stzhu/eslint-config@0.6.3':
-    resolution: {integrity: sha512-SEG2+j66x8/s0ge2LS92Jf/0WzJ722XwlkymAwrh0M85u7sYwGEXTZAJhwcAdNjGM5GXeKj5Oof+dhEolzAvqQ==}
+  '@stzhu/eslint-config@0.6.4':
+    resolution: {integrity: sha512-W9G4suMpB2AoDBCjtlVRHgiEs/PHDKcAnVkVNvagehEIq+X/oant4O5hIRbpluV+Sdp173BJiaWyuI5TEEOlCg==}
     engines: {node: '>=20'}
     peerDependencies:
       eslint: ^9
@@ -2753,7 +2753,7 @@ snapshots:
 
   '@storybook/global@5.0.0': {}
 
-  '@stzhu/eslint-config@0.6.3(eslint@9.35.0(jiti@2.5.1))(storybook@9.1.4(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.4(@types/node@24.3.1)(jiti@2.5.1)(tsx@4.20.5)))(tailwindcss@4.1.13)(turbo@2.5.6)(typescript@5.9.2)(vitest@3.2.4(@types/node@24.3.1)(jiti@2.5.1)(tsx@4.20.5))':
+  '@stzhu/eslint-config@0.6.4(eslint@9.35.0(jiti@2.5.1))(storybook@9.1.4(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.4(@types/node@24.3.1)(jiti@2.5.1)(tsx@4.20.5)))(tailwindcss@4.1.13)(turbo@2.5.6)(typescript@5.9.2)(vitest@3.2.4(@types/node@24.3.1)(jiti@2.5.1)(tsx@4.20.5))':
     dependencies:
       '@eslint/js': 9.35.0
       '@typescript-eslint/eslint-plugin': 8.42.0(@typescript-eslint/parser@8.42.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
