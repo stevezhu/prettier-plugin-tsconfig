@@ -19,8 +19,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(eslint@9.39.2(jiti@2.6.1))(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(tailwindcss@4.1.18)(turbo@2.7.1)(typescript@5.9.3)(vitest@4.0.16(@types/node@25.0.3)(jiti@2.6.1)(tsx@4.21.0))
       '@stzhu/tsconfig':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.1
+        version: 0.1.1
       '@types/node':
         specifier: ^25.0.3
         version: 25.0.3
@@ -520,8 +520,8 @@ packages:
       typescript:
         optional: true
 
-  '@stzhu/tsconfig@0.1.0':
-    resolution: {integrity: sha512-tY3uzz/Ah4O+rtO1WCLgR1XXFLo9n/vfZj1U6RIBY5oNXmylEGsGIG3YTpsggUB8L7sjzgKctrgOoH4U3ZoEoQ==}
+  '@stzhu/tsconfig@0.1.1':
+    resolution: {integrity: sha512-RY73UJYtTXYuUAte/ab+1o3Pbawd8SE9V9S7hbSfHplOeqdH7DZNH07PYFxzCk1R6oKcx/D8ziVDrGyN0wXqlw==}
     engines: {node: '>=18'}
 
   '@testing-library/dom@10.4.1':
@@ -2963,7 +2963,7 @@ snapshots:
       - turbo
       - vitest
 
-  '@stzhu/tsconfig@0.1.0': {}
+  '@stzhu/tsconfig@0.1.1': {}
 
   '@testing-library/dom@10.4.1':
     dependencies:
