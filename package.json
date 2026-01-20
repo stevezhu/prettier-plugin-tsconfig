@@ -43,7 +43,7 @@
     "cheerio": "^1.1.2",
     "eslint": "^9.39.2",
     "globals": "^16.5.0",
-    "prettier-plugin-packagejson": "^2.5.20",
+    "prettier-plugin-packagejson": "^3.0.0",
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
