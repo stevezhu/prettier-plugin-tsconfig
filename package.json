@@ -11,6 +11,7 @@
     "url": "git+https://github.com/stevezhu/prettier-plugin-tsconfig.git"
   },
   "author": "Steve Zhu <4130171+stevezhu@users.noreply.github.com>",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
