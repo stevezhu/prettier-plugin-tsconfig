@@ -14,7 +14,7 @@ on:
 
 jobs:
   bump-version:
-    uses: stevezhu/actions/.github/workflows/npm-bump-version.yaml@v1.0.0
+    uses: stevezhu/actions/.github/workflows/npm-bump-version.yaml@v1.0.1
     permissions:
       contents: write
       pull-requests: write
