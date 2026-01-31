@@ -2,23 +2,10 @@ name: Publish
 on:
   release:
     types: [published]
+
 jobs:
-  build-and-publish:
-    runs-on: ubuntu-latest
+  publish:
+    uses: stevezhu/actions/.github/workflows/npm-publish.yaml@v1.0.0
     permissions:
       contents: read
       id-token: write
-    steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: package.json
-          cache: pnpm
-          registry-url: https://registry.npmjs.org
-      - run: pnpm install
-      - run: pnpm run lint
-      - run: pnpm run test
-      - run: pnpm run build
-      - run: pnpm publish --access public --no-git-checks
