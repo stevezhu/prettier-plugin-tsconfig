@@ -18,9 +18,13 @@ export const parsers = {
     async parse(text, options) {
       const ast = await jsoncParser.parse(text, options);
       if (options.filepath.match(/[\\/][tj]sconfig(\.\w+)?\.json$/i)) {
-        console.log('ast', ast);
         if (isObjectExpression(ast.node)) {
-          sortObjectExpression(ast.node, tsconfigFieldMap);
+          sortObjectExpression(
+            ast.node,
+            tsconfigFieldMap,
+            (ast as any).comments,
+            text,
+          );
         }
       }
       return ast;
