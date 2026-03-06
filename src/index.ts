@@ -10,7 +10,7 @@ type JsonRoot = {
   node: Expression;
 };
 
-const jsonParser = babelParsers.json as Parser<JsonRoot>;
+const jsonParser = babelParsers.jsonc as Parser<JsonRoot>;
 
 export const parsers = {
   json: {

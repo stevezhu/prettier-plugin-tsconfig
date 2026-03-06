@@ -12,10 +12,10 @@ test.each([
     'sorts unknown fields at end in lexical order',
     'tsconfig.unknownFields.json',
   ],
+  ['sorts tsconfig with comments', 'tsconfig.comments.json'],
   ['sorts jsconfig', 'jsconfig.json'],
 ])('%s', async (_, filename) => {
-  // Fixtures are prefixed with an '_' so that they don't get formatted by this plugin
-  const filepath = resolve(__dirname, 'fixtures', `_${filename}`);
+  const filepath = resolve(import.meta.dirname, 'fixtures', filename);
   const tsconfigTest = await readFile(filepath, 'utf8');
   await expect(
     // set the filepath without the '_' prefix here so that the plugin knows to format the file
