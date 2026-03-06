@@ -32,7 +32,8 @@
     "generate": "tsx scripts/generateSortOrder.ts",
     "lint": "prettier -c . && eslint .",
     "test": "tsc --noEmit && vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "watch": "tsup --watch"
   },
   "dependencies": {
     "@babel/types": "^7.28.5"

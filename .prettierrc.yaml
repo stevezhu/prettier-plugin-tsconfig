@@ -1,3 +1,11 @@
 plugins:
   - prettier-plugin-packagejson
+  - '@stzhu/prettier-plugin-tsconfig'
 singleQuote: true
+overrides:
+  - files:
+      - 'tsconfig.json'
+      - 'tsconfig.*.json'
+    options:
+      parser: 'jsonc'
+      trailingComma: 'none'

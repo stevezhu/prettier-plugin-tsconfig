@@ -1,7 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  // This is a comment
+  // This is a line comment
   "compilerOptions": {
+    /* This is a block comment */
     "isolatedModules": true,
     "target": "ESNext",
     "strict": true,
