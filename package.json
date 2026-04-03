@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@stzhu/eslint-config": "^0.10.0",
-    "@stzhu/tsconfig": "^0.1.1",
+    "@stzhu/tsconfig": "^0.4.0",
     "@types/node": "^25.5.0",
     "cheerio": "^1.1.2",
     "eslint": "^9.39.2",
@@ -49,7 +49,7 @@
     "oxfmt": "^0.43.0",
     "tsdown": "^0.21.7",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.2",
     "vitest": "^4.1.2"
   },
   "peerDependencies": {
