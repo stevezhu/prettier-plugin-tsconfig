@@ -3,15 +3,18 @@
   "version": "0.7.2",
   "keywords": [
     "prettier",
-    "typescript",
-    "tsconfig"
+    "tsconfig",
+    "typescript"
   ],
+  "license": "MIT",
+  "author": "Steve Zhu <4130171+stevezhu@users.noreply.github.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stevezhu/prettier-plugin-tsconfig.git"
   },
-  "license": "MIT",
-  "author": "Steve Zhu <4130171+stevezhu@users.noreply.github.com>",
+  "files": [
+    "dist/*"
+  ],
   "type": "module",
   "exports": {
     ".": {
@@ -25,14 +28,11 @@
       }
     }
   },
-  "files": [
-    "dist/*"
-  ],
   "scripts": {
     "build": "tsdown",
-    "format": "prettier -w . && eslint . --fix",
+    "format": "oxfmt && eslint . --fix",
     "generate": "tsx scripts/generateSortOrder.ts",
-    "lint": "prettier -c . && eslint .",
+    "lint": "oxfmt --check && eslint .",
     "test": "tsc --noEmit && vitest run",
     "test:watch": "vitest"
   },
@@ -46,7 +46,7 @@
     "cheerio": "^1.1.2",
     "eslint": "^9.39.2",
     "globals": "^17.0.0",
-    "prettier-plugin-packagejson": "^3.0.0",
+    "oxfmt": "^0.43.0",
     "tsdown": "^0.21.7",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
@@ -55,8 +55,8 @@
   "peerDependencies": {
     "prettier": "^3.x"
   },
-  "packageManager": "pnpm@10.28.2",
   "engines": {
     "node": ">=20"
-  }
+  },
+  "packageManager": "pnpm@10.28.2"
 }
