@@ -2,9 +2,9 @@ import {
   isObjectExpression,
   isObjectProperty,
   isStringLiteral,
-  ObjectExpression,
-  ObjectProperty,
-  StringLiteral,
+  type ObjectExpression,
+  type ObjectProperty,
+  type StringLiteral,
 } from '@babel/types';
 
 export type TSConfigSortOrderMap = {

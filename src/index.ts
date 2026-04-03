@@ -1,5 +1,5 @@
-import { Expression, isObjectExpression } from '@babel/types';
-import { Parser, Plugin } from 'prettier';
+import { type Expression, isObjectExpression } from '@babel/types';
+import type { Parser, Plugin } from 'prettier';
 import { parsers as babelParsers } from 'prettier/plugins/babel';
 
 import tsconfigFieldMap from './__generated__/tsconfigSortOrderMap.json';
