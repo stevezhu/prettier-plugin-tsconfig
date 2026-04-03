@@ -10,16 +10,21 @@ type JsonRoot = {
   node: Expression;
 };
 
-const jsonParser = babelParsers.json as Parser<JsonRoot>;
+const jsoncParser = babelParsers.jsonc as Parser<JsonRoot>;
 
 export const parsers = {
-  json: {
-    ...jsonParser,
+  jsonc: {
+    ...jsoncParser,
     async parse(text, options) {
-      const ast = await jsonParser.parse(text, options);
+      const ast = await jsoncParser.parse(text, options);
       if (options.filepath.match(/[\\/][tj]sconfig(\.\w+)?\.json$/i)) {
         if (isObjectExpression(ast.node)) {
-          sortObjectExpression(ast.node, tsconfigFieldMap);
+          sortObjectExpression(
+            ast.node,
+            tsconfigFieldMap,
+            (ast as any).comments,
+            text,
+          );
         }
       }
       return ast;
