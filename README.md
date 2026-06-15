@@ -2,10 +2,7 @@
 
 Prettier plugin to sort tsconfig.json files.
 
-It hooks into Prettier's JSON formatting and reorders the keys in `tsconfig.json`
-and `jsconfig.json` files to follow the order used by the official
-[TSConfig Reference](https://www.typescriptlang.org/tsconfig). Keys that aren't
-in the reference are kept and sorted alphabetically at the end.
+It hooks into Prettier's JSON formatting and reorders the keys in `tsconfig.json` and `jsconfig.json` files to follow the order used by the official [TSConfig Reference](https://www.typescriptlang.org/tsconfig). Keys that aren't in the reference are kept and sorted alphabetically at the end.
 
 ## Installation
 
