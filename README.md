@@ -53,40 +53,10 @@ The plugin automatically applies to any file matching `tsconfig.json`,
 `jsconfig.json`, or a variant such as `tsconfig.build.json` /
 `jsconfig.base.json`. No other JSON files are affected.
 
-## Example
+To format every config file in your project, use a glob:
 
-Before:
-
-```json
-{
-  "include": ["src/**/*"],
-  "compilerOptions": {
-    "strict": true,
-    "outDir": "./dist",
-    "target": "ESNext",
-    "module": "NodeNext",
-    "esModuleInterop": true
-  },
-  "exclude": ["node_modules"],
-  "extends": "./tsconfig.base.json"
-}
-```
-
-After:
-
-```json
-{
-  "extends": "./tsconfig.base.json",
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"],
-  "compilerOptions": {
-    "strict": true,
-    "module": "NodeNext",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "target": "ESNext"
-  }
-}
+```sh
+prettier -w '**/{ts,js}config{,.?*}.json'
 ```
 
 ## Generating sort order map
